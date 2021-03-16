@@ -28,6 +28,11 @@ public class bank {
 		driver.findElement(By.xpath(".//*[contains(@href,'vi1509866521?ref_=nv_sr_srsg_1')]")).click();
 		String heading =driver.findElement(By.xpath(".//*[@class='RelationInfostyles__RelationTitle-sc-1a6joiq-1 iMMyKJ']")).getText();
 		Assert.assertEquals("Game of Thrones (2011)", heading);
+		/*if(expectedHeading.equalsIgnoreCase(heading))
+          	System.out.println("The expected heading is same as actual heading --- "+heading);
+    	else
+          	System.out.println("The expected heading doesn't match the actual heading --- "+heading);
+		*/
 		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File("C:\\Desktop_Backup\\Gurpreet\\Screenshot.png"));
 		driver.quit();
