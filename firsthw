@@ -27,8 +27,6 @@ public class bank {
 		driver.findElement(By.xpath("//*[contains(@class,'ipc-lockup-overlay__gradient ipc-lockup-overlay__gradient--linear')]")).click();
 		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File("C:\\Desktop_Backup\\Gurpreet\\Screenshot.png"));
-		//driver.findElement(By.xpath("//*[@id='imdb-video-root-83263726-5379-4334-8c5d-837e7ef83e09"]/div/main/div/section[1]/div/div[2]/div/div[1]/div[2]/div/a[1]/h5"      
-		//Assert.assertEquals(originalTitle, expectedTitle);
 		driver.quit();
 
 	}
