@@ -25,6 +25,8 @@ public class bank {
 		Thread.sleep(5000);
 		driver.findElement(By.id("suggestion-search")).sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath("//*[contains(@class,'ipc-lockup-overlay__gradient ipc-lockup-overlay__gradient--linear')]")).click();
+		String heading =driver.findElement(By.xpath(".//*[@class='RelationInfostyles__RelationTitle-sc-1a6joiq-1 iMMyKJ']")).getText();
+		Assert.assertEquals("Game of Thrones (2011)", heading);
 		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(file, new File("C:\\Desktop_Backup\\Gurpreet\\Screenshot.png"));
 		driver.quit();
