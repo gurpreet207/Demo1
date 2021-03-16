@@ -17,14 +17,12 @@ public class bank {
 
 	public static void main(String[] args) throws Exception {
 		
-		//System.setProperty("webdriver.chrome.driver","C:\\Users\\Gurpreet\\Downloads\\jar files\\chromedriver.exe");
 		System.setProperty("webdriver.gecko.driver","C:\\Desktop_Backup\\Gurpreet\\geckodriver-v0.29.0-win64\\geckodriver.exe");
 		WebDriver driver= new FirefoxDriver();
 		driver.get("https://www.imdb.com");
 		
 		driver.findElement(By.id("suggestion-search")).sendKeys("games of thrones");
 		Thread.sleep(5000);
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 		driver.findElement(By.id("suggestion-search")).sendKeys(Keys.ENTER);
 		driver.findElement(By.xpath("//*[contains(@class,'ipc-lockup-overlay__gradient ipc-lockup-overlay__gradient--linear')]")).click();
 		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
